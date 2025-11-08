@@ -27,8 +27,9 @@ DEBUG = os.getenv("DEBUG", "1").lower() in ("1", "true", "yes")
 
 if not DEBUG:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ["thesys.badmiguel.com"]
+else:
+    ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
