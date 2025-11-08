@@ -4,8 +4,8 @@ services:
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8080
-    volumes:
-      - .:/app
+    environment:
+      - DEBUG=${DEBUG}
     env_file:
       - .env
     ports:
