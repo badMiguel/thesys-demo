@@ -10,6 +10,7 @@ COPY ThesisManager/ /app/ThesisManager/
 RUN pip install gunicorn
 
 WORKDIR /app/ThesisManager/
+RUN python manage.py collectstatic --noinput
 
 EXPOSE 8080
 
