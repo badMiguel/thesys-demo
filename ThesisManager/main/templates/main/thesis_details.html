@@ -53,13 +53,7 @@
         </div>
     {% endif %}
 
-    <div class="go_back">
-        <form method="post" action="{% url 'thesis_list' %}">
-            {% csrf_token %}
-            <input type="hidden" name="thesis-list" value="{% if request.META.HTTP_REFERER %}{{ request.META.HTTP_REFERER }}{% else %}/{% endif %}">
-            <button type="submit">Back to Thesis List</button>
-        </form>
-    </div>
+    <a href="{% url 'thesis_list' %}" class="back">Back to Thesis List</a>
     <div class="other_thesis">
         <h3>See other Thesis</h3>
         <ul class='all_theses'>

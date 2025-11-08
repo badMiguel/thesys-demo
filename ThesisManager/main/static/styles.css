@@ -76,7 +76,7 @@ header{
 .nav_container{
     display: flex;
     justify-content: flex-end;
-    gap: 4rem;
+    gap: 2rem;
 
     a{
         font-weight: 500;
